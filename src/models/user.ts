@@ -16,7 +16,7 @@ const UserSchema: Schema<IUser> = new Schema({
   name: { type: String, required: true },
   role: { type: String, enum: ['learner', 'tutor', 'admin'], required: true },
   createdAt: { type: Date, default: Date.now }
-});gi
+});
 
 UserSchema.pre<IUser>('save', async function (next) {
   if (!this.isModified('password')) return next();
