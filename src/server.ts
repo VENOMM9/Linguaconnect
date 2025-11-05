@@ -17,12 +17,12 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api", tutorRoutes);   // tutor routes
-app.use("/api", adminRoutes);   // admin routes
+app.use("/api", tutorRoutes);   
+app.use("/api", adminRoutes);   
 
 // Health check route
 app.get("/", (_req, res) => {
-  res.send("LinguaConnect API is running 🚀");
+  res.send("LinguaConnect API is running");
 });
 
 // Error handling (basic)

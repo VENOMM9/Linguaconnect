@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import {Tutor}  from '../models/tutor';
 import User from "../models/user.js";
 
-// Submit or update tutor application
+// Submit tutor application
 export const applyTutor = async (req: Request, res: Response) => {
     try {
       if (!req.user) {
